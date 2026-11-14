@@ -3,6 +3,10 @@
 import getCollection, { LINKS_COLLECTION } from "../db";
 
 export default async function createLink(url: string, alias: string) {
+    if (alias.includes("/") || alias.includes("?")|| alias.includes("#")) {
+        return { error: "Enter a valid alias." };
+    }
+
     try {
         const newURL = new URL(url);
 
