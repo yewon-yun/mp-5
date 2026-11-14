@@ -61,7 +61,7 @@ export default function Home() {
                                 if (result.error) {
                                     setMessage(result.error);
                                 } else {
-                                    setShortUrl(`http://localhost:3000/r/${alias}`);
+                                    setShortUrl(`https://mp-5-xp4n.vercel.app/r/${alias}`);
                                 }
                             })
                             .catch(() => setMessage("Could not save link."));
